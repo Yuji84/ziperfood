@@ -24,8 +24,8 @@ class CreateAdressesTable extends Migration
             $table->string('neighborhood');
             $table->string('city');
             $table->string('state');
-            $table->interger('latitude');
-            $table->interger('longitude');
+            $table->double('latitude',10,7);
+            $table->double('longitude',10,7);
             $table->timestamps();
         });
     }
