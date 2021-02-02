@@ -19,21 +19,24 @@ class ProductsSeeder extends Seeder
             'price' => 51,
             'size' => 'Grande - 8 pedaços',
             'category_id' => 1,
-            'company_id' => 1
+            'company_id' => 1,
+            'active' => true,
         ]);
         Product::create([
             'name' => 'Pizza de mussarela',
             'price' => 61,
             'size' => 'Gigante - 10 pedaços',
             'category_id' => 1,
-            'company_id' => 1
+            'company_id' => 1,
+            'active' => true,
         ]);
         Product::create([
             'name' => 'Pizza de mussarela',
             'price' => 31,
             'size' => 'Brotinho - 4 pedaços',
             'category_id' => 1,
-            'company_id' => 1
+            'company_id' => 1,
+            'active' => true,
         ]);
     }
 }

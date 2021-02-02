@@ -16,11 +16,13 @@ class DeliverymenSeeder extends Seeder
     {
         Deliveryman::create([
             'name' => 'João',
-            'celphone' => '911111111'
+            'celphone' => '911111111',
+            'company_id' => 1
         ]);
         Deliveryman::create([
             'name' => 'José',
-            'celphone' => '911111112'
+            'celphone' => '911111112',
+            'company_id' => 1
         ]);
     }
 }

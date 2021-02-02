@@ -16,7 +16,8 @@ class CompaniesSeed extends Seeder
     {
         Company::create([
             'name' => 'Ziper',
-            'address' => 'Rua Antônio Festa, 119',
+            'street' => 'Rua Antônio Festa',
+            'number' => '119',
             'complement' => null,
             'cep' => '06296060',
             'neighborhood' => 'Remédios',

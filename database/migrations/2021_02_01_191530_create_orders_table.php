@@ -15,8 +15,10 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('accept');
-            $table->dateTime('dispatched');
+            $table->bigInteger('company_id')->unsigned();
+            $table->foreign('company_id')->references('id')->on('products')->onDelete('cascade');
+            $table->date('accept');
+            $table->date('dispatched');
             $table->bigInteger('coupon_id')->unsigned()->nullable();
             $table->foreign('coupon_id')->references('id')->on('coupons')->onDelete('set null');
             $table->boolean('delivery');
@@ -29,6 +31,7 @@ class CreateOrdersTable extends Migration
             $table->bigInteger('address_id')->unsigned()->nullable();
             $table->foreign('address_id')->references('id')->on('adresses')->onDelete('set null');
             $table->boolean('paid');
+            $table->text('feedback')->nullable();
             $table->timestamps();
         });
     }

@@ -15,10 +15,12 @@ class CreateCouponsTable extends Migration
     {
         Schema::create('coupons', function (Blueprint $table) {
             $table->id();
-            $table->interger('number');
+            $table->integer('number');
             $table->double('value',4,2);
-            $table->dataTime('operation');
+            $table->date('operation');
             $table->boolean('active');
+            $table->bigInteger('company_id')->unsigned();
+            $table->foreign('company_id')->references('id')->on('products')->onDelete('cascade');
             $table->timestamps();
         });
     }

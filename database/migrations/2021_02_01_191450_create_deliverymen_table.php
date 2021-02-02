@@ -18,6 +18,8 @@ class CreateDeliverymenTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('celphone');
+            $table->bigInteger('company_id')->unsigned();
+            $table->foreign('company_id')->references('id')->on('products')->onDelete('cascade');
             $table->timestamps();
         });
     }

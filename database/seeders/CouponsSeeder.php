@@ -17,8 +17,9 @@ class CouponsSeeder extends Seeder
         Coupon::create([
             'number' => 1000000,
             'value' => 10,
-            'operation' => '2021-02-28 00:00:00',
+            'operation' => '2021-02-28',
             'active' => true,
+            'company_id' => 1,
         ]);
     }
 }

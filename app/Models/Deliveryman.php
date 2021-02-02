@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Deliveryman extends Model
 {
     protected $fillable = [
-        'number', 'celphone'
+        'number', 'celphone','company_id'
     ];
     use HasFactory;
 }

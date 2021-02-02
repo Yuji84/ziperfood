@@ -15,6 +15,7 @@ class OrdersSeeder extends Seeder
     public function run()
     {
         Order::create([
+            'company_id' => 1,
             'accept' => '2021-01-31 22:07:13',
             'dispatched' => '2021-01-31 22:37:13',
             'coupon_id' => 1,
@@ -25,6 +26,7 @@ class OrdersSeeder extends Seeder
             'customer_id' => 1,
             'address_id' => 1,
             'paid' => false,
+            'feedback' => null,
         ]);
     }
 }
