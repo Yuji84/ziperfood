@@ -21,6 +21,11 @@ class DatabaseSeeder extends Seeder
         $this->call(ProductTagSeeder::class);
         $this->call(IngredientsSeeder::class);
         $this->call(IngredientProductSeeder::class);
-        // \App\Models\User::factory(10)->create();
+        $this->call(CustomersSeeder::class);
+        $this->call(AdressesSeeder::class);
+        $this->call(CouponsSeeder::class);
+        $this->call(DeliverymenSeeder::class);
+        $this->call(OrdersSeeder::class);
+
     }
 }

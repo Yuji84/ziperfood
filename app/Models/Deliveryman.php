@@ -10,5 +10,16 @@ class Deliveryman extends Model
     protected $fillable = [
         'number', 'celphone','company_id'
     ];
+    
     use HasFactory;
+
+    public function company()
+    {
+        return $this->belongsTo(Company::class)->get()->all()[0];
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class)->get()->all();
+    }
 }

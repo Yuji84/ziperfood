@@ -12,4 +12,15 @@ class Category extends Model
     ];
 
     use HasFactory;
+
+    public function company()
+    {
+        return $this->belongsTo(Company::class)->get()->all()[0];
+    }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class)->get()->all();
+    }
+    
 }

@@ -8,7 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Coupon extends Model
 {
     protected $fillable = [
-        'number', 'value', 'operation','active','company_id'
+        'number', 'value', 'operation','active','company_id',
     ];
+
     use HasFactory;
+
+    public function company()
+    {
+        return $this->belongsTo(Company::class)->get()->all()[0];
+    }
+    public function order()
+    {
+        return $this->hasOne(Order::class)->get()[0];
+    }
 }

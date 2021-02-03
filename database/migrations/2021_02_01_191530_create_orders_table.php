@@ -29,7 +29,7 @@ class CreateOrdersTable extends Migration
             $table->bigInteger('customer_id')->unsigned()->nullable();
             $table->foreign('customer_id')->references('id')->on('customers')->onDelete('set null');
             $table->bigInteger('address_id')->unsigned()->nullable();
-            $table->foreign('address_id')->references('id')->on('adresses')->onDelete('set null');
+            $table->foreign('address_id')->references('id')->on('addresses')->onDelete('set null');
             $table->boolean('paid');
             $table->text('feedback')->nullable();
             $table->timestamps();
