@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 
 class IngredientsSeeder extends Seeder
 {
-    private $ingredients=['mussarela', 'tomate', 'molho','oregano'];
+    private $ingredients=['mussarela', 'tomate', 'molho','oregano', 'catupiry'];
     /**
      * Run the database seeds.
      *

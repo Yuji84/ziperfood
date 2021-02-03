@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProductTag extends Model
 {
+    use HasFactory;
+    
     protected $table = 'product_tag';
 
     protected $fillable = [
@@ -14,5 +16,4 @@ class ProductTag extends Model
         'tag_id'
     ];
     
-    use HasFactory;
 }
