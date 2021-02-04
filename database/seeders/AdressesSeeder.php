@@ -28,7 +28,7 @@ class AdressesSeeder extends Seeder
         ]);
 
         Address::create([
-            'customer_id' => 1,
+            'user_id' => 1,
             'street' => 'Antônio Ayrosa',
             'number' => '100',
             'complement' => null,
