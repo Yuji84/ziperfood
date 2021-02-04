@@ -26,8 +26,8 @@ class CreateOrdersTable extends Migration
             $table->bigInteger('deliveryman_id')->unsigned()->nullable();
             $table->foreign('deliveryman_id')->references('id')->on('deliverymen')->onDelete('set null');
             $table->enum('payment_method',['money','pagseguro-credit','pix','debit','credit']);
-            $table->bigInteger('customer_id')->unsigned()->nullable();
-            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('set null');
+            $table->bigInteger('user_id')->unsigned()->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
             $table->bigInteger('address_id')->unsigned()->nullable();
             $table->foreign('address_id')->references('id')->on('addresses')->onDelete('set null');
             $table->boolean('paid');

@@ -47,4 +47,14 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Company::class)->get()->all()[0];
     }
+
+    public function addresses()
+    {
+        return $this->hasMany(Address::class)->get()->all();
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class)->get()->all();
+    }
 }

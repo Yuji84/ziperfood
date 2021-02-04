@@ -21,11 +21,12 @@ class DatabaseSeeder extends Seeder
         $this->call(ProductTagSeeder::class);
         $this->call(IngredientsSeeder::class);
         $this->call(IngredientProductSeeder::class);
-        $this->call(CustomersSeeder::class);
         $this->call(AdressesSeeder::class);
         $this->call(CouponsSeeder::class);
         $this->call(DeliverymenSeeder::class);
         $this->call(OrdersSeeder::class);
-
+        $this->call(ExtrasSeeder::class);
+        $this->call(ExtrasIngredientsSeeder::class);
+        
     }
 }

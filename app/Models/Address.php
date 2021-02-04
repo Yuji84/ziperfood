@@ -8,14 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Address extends Model
 {
     protected $fillable = [
-        'customer_id', 'street', 'number','complement','cep','neighborhood','city','state','latitude','longitude'
+        'user_id', 'street', 'number','complement','cep','neighborhood','city','state','latitude','longitude'
     ];
 
     use HasFactory;
 
-    public function customer()
+    public function user()
     {
-        return $this->belongsTo(Customer::class)->get()->all()[0];
+        return $this->belongsTo(User::class)->get()->all()[0];
     }
 
     public function orders()

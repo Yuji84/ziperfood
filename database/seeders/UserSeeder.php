@@ -15,10 +15,18 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::create([
+            'name' => 'Vanessa',
+            'celphone' => '11995253488',
+            'email' => null,
+            'access' => 'customer',
+            'password' =>'12345678',
+            'company_id' => 1
+        ]);
+        User::create([
             'name' => 'controller',
             'celphone' => '11999859047',
             'email' => 'eymath@hotmail.com',
-            'access' => 9,
+            'access' => 'controller',
             'password' =>'12345678',
             'company_id' => 1
         ]);

@@ -23,7 +23,7 @@ class OrdersSeeder extends Seeder
             'delivery_tax' => 5,
             'deliveryman_id' => 1,
             'payment_method' => 'debit',
-            'customer_id' => 1,
+            'user_id' => 1,
             'address_id' => 1,
             'paid' => false,
             'feedback' => null,

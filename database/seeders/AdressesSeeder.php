@@ -15,7 +15,7 @@ class AdressesSeeder extends Seeder
     public function run()
     {
         Address::create([
-            'customer_id' => 1,
+            'user_id' => 1,
             'street' => 'Rua Agamenom Magalhães',
             'number' => '299',
             'complement' => null,
