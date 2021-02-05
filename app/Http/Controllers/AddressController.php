@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Company;
+use App\Models\Address;
 use Illuminate\Http\Request;
 
-class CompanyController extends Controller
+class AddressController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class CompanyController extends Controller
     public function index()
     {
         
-        return response()->json(Company::all());
+        return response()->json(Address::all());
         
     }
 
@@ -37,7 +37,7 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        Company::create($request->all());
+        Address::create($request->all());
     }
 
     /**
@@ -48,7 +48,7 @@ class CompanyController extends Controller
      */
     public function show($id)
     {
-        return response()->json(Company::findOrFail($id));
+        return response()->json(Address::findOrFail($id));
     }
 
     /**
@@ -71,7 +71,7 @@ class CompanyController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Company::findOrFail($id)->update($request->all());
+        Address::findOrFail($id)->update($request->all());
     }
 
     /**
@@ -82,6 +82,6 @@ class CompanyController extends Controller
      */
     public function destroy($id)
     {
-        Company::findOrFail($id)->delete();
+        Address::findOrFail($id)->delete();
     }
 }

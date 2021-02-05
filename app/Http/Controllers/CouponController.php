@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Company;
+use App\Models\Coupon;
 use Illuminate\Http\Request;
 
-class CompanyController extends Controller
+class CouponController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class CompanyController extends Controller
     public function index()
     {
         
-        return response()->json(Company::all());
+        return response()->json(Coupon::all());
         
     }
 
@@ -37,7 +37,7 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        Company::create($request->all());
+        Coupon::create($request->all());
     }
 
     /**
@@ -48,7 +48,7 @@ class CompanyController extends Controller
      */
     public function show($id)
     {
-        return response()->json(Company::findOrFail($id));
+        return response()->json(Coupon::findOrFail($id));
     }
 
     /**
@@ -71,7 +71,7 @@ class CompanyController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Company::findOrFail($id)->update($request->all());
+        Coupon::findOrFail($id)->update($request->all());
     }
 
     /**
@@ -82,6 +82,6 @@ class CompanyController extends Controller
      */
     public function destroy($id)
     {
-        Company::findOrFail($id)->delete();
+        Coupon::findOrFail($id)->delete();
     }
 }
