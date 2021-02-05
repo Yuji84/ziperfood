@@ -15,12 +15,12 @@ class Category extends Model
 
     public function company()
     {
-        return $this->belongsTo(Company::class)->get()->all()[0];
+        return $this->belongsTo(Company::class);
     }
 
     public function products()
     {
-        return $this->hasMany(Product::class)->get()->all();
+        return $this->hasMany(Product::class);
     }
     
 }

@@ -26,26 +26,26 @@ class Order extends Model
 
     public function company()
     {
-        return $this->belongsTo(Company::class)->get()->all()[0];
+        return $this->belongsTo(Company::class);
     }
 
     public function deliveryman()
     {
-        return $this->belongsTo(Deliveryman::class)->get()->all()[0];
+        return $this->belongsTo(Deliveryman::class);
     }
 
     public function user()
     {
-        return $this->belongsTo(User::class)->get()->all()[0];
+        return $this->belongsTo(User::class);
     }
 
     public function address()
     {
-        return $this->belongsTo(Address::class)->get()->all()[0];
+        return $this->belongsTo(Address::class);
     }
 
     public function coupon()
     {
-        return $this->belongsTo(Coupon::class)->get()[0];
+        return $this->belongsTo(Coupon::class);
     }
 }

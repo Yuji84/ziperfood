@@ -15,10 +15,10 @@ class Coupon extends Model
 
     public function company()
     {
-        return $this->belongsTo(Company::class)->get()->all()[0];
+        return $this->belongsTo(Company::class);
     }
     public function order()
     {
-        return $this->hasOne(Order::class)->get()[0];
+        return $this->hasOne(Order::class);
     }
 }

@@ -15,46 +15,46 @@ class Company extends Model
 
     public function users()
     {
-        return $this->hasMany(User::class)->get()->all();
+        return $this->hasMany(User::class);
     }
 
     public function categories()
     {
-        return $this->hasMany(Category::class)->get()->all();
+        return $this->hasMany(Category::class);
     }
 
     public function tags()
     {
-        return $this->hasMany(Tag::class)->get()->all();
+        return $this->hasMany(Tag::class);
     }
 
     public function ingredients()
     {
-        return $this->hasMany(Ingredient::class)->get()->all();
+        return $this->hasMany(Ingredient::class);
     }
 
     public function products()
     {
-        return $this->hasMany(Product::class)->get()->all();
+        return $this->hasMany(Product::class);
     }
 
     public function customers()
     {
-        return $this->hasMany(Customer::class)->get()->all();
+        return $this->hasMany(Customer::class);
     }
 
     public function coupons()
     {
-        return $this->hasMany(Coupon::class)->get()->all();
+        return $this->hasMany(Coupon::class);
     }
 
     public function deliverymen()
     {
-        return $this->hasMany(Deliveryman::class)->get()->all();
+        return $this->hasMany(Deliveryman::class);
     }
 
     public function orders()
     {
-        return $this->hasMany(Order::class)->get()->all();
+        return $this->hasMany(Order::class);
     }
 }

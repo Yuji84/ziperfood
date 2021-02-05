@@ -15,12 +15,12 @@ class Address extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class)->get()->all()[0];
+        return $this->belongsTo(User::class);
     }
 
     public function orders()
     {
-        return $this->hasMany(Order::class)->get()->all();
+        return $this->hasMany(Order::class);
     }
 
 

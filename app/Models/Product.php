@@ -20,21 +20,21 @@ class Product extends Model
 
     public function company()
     {
-        return $this->belongsTo(Company::class)->get()->all()[0];
+        return $this->belongsTo(Company::class);
     }
 
     public function category()
     {
-        return $this->belongsTo(Category::class)->get()->all()[0];
+        return $this->belongsTo(Category::class);
     }
 
     public function ingredients()
     {
-        return $this->belongsToMany(Ingredient::class)->get()->all();
+        return $this->belongsToMany(Ingredient::class);
     }
 
     public function tags()
     {
-        return $this->belongsToMany(Tag::class)->get()->all();
+        return $this->belongsToMany(Tag::class);
     }
 }

@@ -45,16 +45,16 @@ class User extends Authenticatable
 
     public function company()
     {
-        return $this->belongsTo(Company::class)->get()->all()[0];
+        return $this->belongsTo(Company::class);
     }
 
     public function addresses()
     {
-        return $this->hasMany(Address::class)->get()->all();
+        return $this->hasMany(Address::class);
     }
 
     public function orders()
     {
-        return $this->hasMany(Order::class)->get()->all();
+        return $this->hasMany(Order::class);
     }
 }

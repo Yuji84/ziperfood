@@ -15,11 +15,11 @@ class Deliveryman extends Model
 
     public function company()
     {
-        return $this->belongsTo(Company::class)->get()->all()[0];
+        return $this->belongsTo(Company::class);
     }
 
     public function orders()
     {
-        return $this->hasMany(Order::class)->get()->all();
+        return $this->hasMany(Order::class);
     }
 }
