@@ -23,4 +23,9 @@ class Ingredient extends Model
     {
         return $this->belongsToMany(Product::class);
     }
+
+    public function extras()
+    {
+        return $this->belongsToMany(Extra::class);
+    }
 }
